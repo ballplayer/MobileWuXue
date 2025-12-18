@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { registerSW } from 'virtual:pwa-register';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -13,3 +14,9 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// Register the PWA service worker (vite-plugin-pwa provides the virtual helper)
+if ('serviceWorker' in navigator) {
+  // immediate: true will try to register right away in dev/production
+  registerSW({ immediate: true });
+}
