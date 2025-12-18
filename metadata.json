@@ -1,0 +1,8 @@
+{
+  "name": "ModileWuXue",
+  "description": "A comprehensive AI-powered educational assistant simulator for iPad, featuring OCR problem solving, smart grading, class data analytics, and an intelligent question bank.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
